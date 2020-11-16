@@ -36,3 +36,7 @@ void InputAndOutput(void)
 	scanf_s("%d", &varThree);
 	// the symbol "&" is a operated symbol used to get the address of inner memory of the parameter
 }
+// the follow is simple encrypt function used to translate the meaning string to cryptograph
+void SimpleEncrypt(void)
+{
+}
