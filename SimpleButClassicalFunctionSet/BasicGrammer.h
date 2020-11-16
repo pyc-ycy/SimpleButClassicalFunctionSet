@@ -34,4 +34,5 @@ void InputAndOutput(void)
 	cin >> varTwo;
 	int varThree;
 	scanf_s("%d", &varThree);
+	// the symbol "&" is a operated symbol used to get the address of inner memory of the parameter
 }
