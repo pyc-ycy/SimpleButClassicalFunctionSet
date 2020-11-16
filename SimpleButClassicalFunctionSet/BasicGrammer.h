@@ -49,23 +49,23 @@ void SimpleEncrypt(void)
 		if (result == 1)
 		{
 			printf("please input the string you want to encrypt:\n");
-			scanf("%s", &text);
+			cin >> text;
 			int count = strlen(text); // strlen() is a function of string.h used to get the length of parameter
-			for (int i = 0; i < count; i++)
+			for (i = 0; i < count; i++)
 			{
 				cryptograph[i] = text[i] + i + 5;
 			}
-			cryptograph[count] = '\0';
+			cryptograph[i] = '\0';
 			cout << "after encrypting:" << cryptograph << endl;
 		}
 		else if (result == 2)
 		{
 			int count = strlen(text);
-			for (int i = 0; i < count; i++)
+			for (i = 0; i < count; i++)
 			{
 				text[i] = cryptograph[i] - i - 5;
 			}
-			text[count] = '\0';
+			text[i] = '\0';
 			cout << "meaning string:" << text << endl;
 		}
 		else if (result == 3)
