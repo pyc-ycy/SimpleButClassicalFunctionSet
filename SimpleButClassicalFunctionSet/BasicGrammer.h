@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <stdio.h>
+#include <string>
 using namespace std;
 
 // the follow is a function of print a string:"Hello word" by using different way.
@@ -39,4 +40,17 @@ void InputAndOutput(void)
 // the follow is simple encrypt function used to translate the meaning string to cryptograph
 void SimpleEncrypt(void)
 {
+	int result = 1;
+	int i;
+	char text[128] = { '\0' };
+	char cryptograph[128] = { '\0' };
+	while (true)
+	{
+		if (result == 1)
+		{
+			printf("please input the string you want to encrypt:\n");
+			scanf_s("%s", &text);
+			int count = strlen(text); // strlen() is a function of string.h used to get the length of parameter
+		}
+	}
 }
