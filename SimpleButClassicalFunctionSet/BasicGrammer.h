@@ -20,3 +20,18 @@ void PrintHello(void)
 	char s[] = "Hello world";
 	printf("%s", s);
 }
+// the follow function is demoncrate how to use keyboard to inout data
+void InputAndOutput(void)
+{
+	// Inputing data to a variable has three manner
+	// one is using static assignment when declare a varable
+	// second is using standardized inputstream get data from input device such as keyboard
+	// three is using scanf function to get data from screen
+	// the different between the second and three is the former provided by standardized library of C++
+	// and the last supported by C library
+	int varOne = 12;	// the data type you can modify to what you want, just remember in vaild way
+	int varTwo;
+	cin >> varTwo;
+	int varThree;
+	scanf_s("%d", &varThree);
+}
