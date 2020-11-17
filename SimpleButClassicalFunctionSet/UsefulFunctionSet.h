@@ -5,7 +5,7 @@ void char2bin(void)
 {
 	char buff[100];
 	printf("请输入你的学号+姓名的拼音");
-	scanf_s("%s", buff);
+	int ret = scanf_s("%s", buff);
 	for (int i = 0; buff[i] != '\0'; i++)
 	{
 		if (buff[i] != '\0')
