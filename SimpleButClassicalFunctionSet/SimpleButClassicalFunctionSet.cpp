@@ -7,7 +7,7 @@
 int main()
 {
 	int a[] = { 0,5,5,3,5,7,5,5 };
-	int majority = Majority(a, 7);
+	int majority = Majority(a, 7, 3);
 	cout << majority << endl;
 	return 0;
 }

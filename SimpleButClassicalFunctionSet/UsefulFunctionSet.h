@@ -61,3 +61,31 @@ int Majority(int a[], int len)
 	if (count > len / 2)return c;
 	else return -1;
 }
+// manner two: using the mind of counting sort
+int Majority(int a[], int len, int type)
+{
+	if (type == 2)
+	{
+		int k, * p, max;
+		p = new int[len];
+		for (k = 0; k < len; k++)p[k] = 0;
+		max = 0;
+		for (k = 0; k < len; k++)
+		{
+			p[a[k]]++;
+			if (p[a[k]] > p[max])max = a[k];
+		}
+		if (p[max] > len / 2)return max;
+		else return -1;
+	}
+	else if (type == 1)
+	{
+		int t = Majority(a, len);
+		return t;
+	}
+	else
+	{
+		cout << "Happened Call Error, Cause by algorithm edition!" << endl;
+		exit(0);
+	}
+}
