@@ -38,6 +38,26 @@ void char2bin(void)
 }
 // The two algorithms as follow are serving the same function that find out the majority num
 // from a num sequence if it exist in sequence.
+// manner one: norm mind
 int Majority(int a[], int len)
 {
+	int i, c, count = 1;
+	c = a[0];
+	for (i = 1; i < len; i++)
+		if (a[i] == c)
+			count++;
+		else
+			if (count > 0)
+				count--;
+			else
+			{
+				c = a[i];
+				count = 1;
+			}
+	if (count > 0)
+		for (i = count = 0; i < len; i++)
+			if (a[i] == c)
+				count++;
+	if (count > len / 2)return c;
+	else return -1;
 }

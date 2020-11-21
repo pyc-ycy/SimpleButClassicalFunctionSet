@@ -3,9 +3,13 @@
 
 #include <iostream>
 #include "BasicGrammer.h"
+#include "UsefulFunctionSet.h"
 int main()
 {
-	SimpleEncrypt();
+	int a[] = { 0,5,5,3,5,7,5,5 };
+	int majority = Majority(a, 7);
+	cout << majority << endl;
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
