@@ -1,6 +1,7 @@
 #pragma once
 #include <string.h>
 #include <stdio.h>
+// The Function  is used to convert a char data to binary
 void char2bin(void)
 {
 	char buff[100];
@@ -34,4 +35,9 @@ void char2bin(void)
 		}
 	}
 	printf("\n");
+}
+// The two algorithms as follow are serving the same function that find out the majority num
+// from a num sequence if it exist in sequence.
+int Majority(int a[], int len)
+{
 }
