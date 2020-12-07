@@ -1,6 +1,9 @@
 #pragma once
 #include <string.h>
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#define _CRT_SECURE_NO_WARNINGS 1
 // The Function  is used to convert a char data to binary
 void char2bin(void)
 {
@@ -93,7 +96,7 @@ int Majority(int a[], int len, int type)
 // 以下函数用于求取数组中的最大数对之差
 int MaxDiff(int arr[], int length)
 {
-	int max, rmin, k;
+	int max, rmin, k = 0;
 	max = arr[0];
 	for (int i = 1; i < length; i++)
 	{
@@ -111,3 +114,37 @@ int MaxDiff(int arr[], int length)
 	}
 	return max - rmin;
 }
+bool opSymbol(char t)
+{
+	if (t == '+' || t == '-' || t == '*' || t == '/')
+		return true;
+	return false;
+}
+int char2num(char* s, int l)
+{
+	int result = 0;
+	int k = l;
+	for (int i = 0; i < l; i++)
+	{
+		result += (s[i] - '0') * pow(10, k);
+		k--;
+	}
+}
+//int valString(char* s)
+//{
+//	int result, pre, next;
+//	result = 0;
+//	pre = 0;
+//	next = 0;
+//	int len = strlen(s);
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (opSymbol(s[i]))
+//		{
+//			char* temp = new char[i];
+//			for (int j = pre; j < i; j++)
+//				temp[j] = s[j];
+//			temp[i] = '\0';
+//		}
+//	}
+//}
