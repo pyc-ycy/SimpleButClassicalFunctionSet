@@ -6,9 +6,9 @@
 #include "UsefulFunctionSet.h"
 int main()
 {
-	int a[] = { 0,5,5,3,5,7,5,5 };
-	int majority = Majority(a, 7, 3);
-	cout << majority << endl;
+	int a[] = { 2, 4, 1, 16, 7, 5, 11, 9 };
+	int result = MaxDiff(a, 8);
+	cout << "result=" << result << endl;
 	return 0;
 }
 

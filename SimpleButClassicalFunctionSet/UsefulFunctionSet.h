@@ -89,3 +89,25 @@ int Majority(int a[], int len, int type)
 		exit(0);
 	}
 }
+//在一个数组中，某个数字减去它右边的数得到一个数对之差
+// 以下函数用于求取数组中的最大数对之差
+int MaxDiff(int arr[], int length)
+{
+	int max, rmin, k;
+	max = arr[0];
+	for (int i = 1; i < length; i++)
+	{
+		if (arr[i] >= max)
+		{
+			max = arr[i];
+			k = i;
+		}
+	}
+	rmin = arr[k + 1];
+	for (int j = k + 2; j < length; j++)
+	{
+		if (rmin >= arr[j])
+			rmin = arr[j];
+	}
+	return max - rmin;
+}
